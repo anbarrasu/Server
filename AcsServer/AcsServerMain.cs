@@ -38,7 +38,7 @@ namespace AcsServer
         {
             //try
             //{
-                MessageBox.Show("In Main thread");
+                //MessageBox.Show("In Main thread");
                 udpserver = new UdpSocketListener(ref fromclientQueue,ref QueueEvnt);
                 RdrMsgFormat rcvdvalue;
 

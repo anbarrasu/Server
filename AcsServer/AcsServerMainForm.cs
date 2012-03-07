@@ -16,15 +16,30 @@ namespace AcsServer
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Include the code to start here
-            obj = new AcsServerMain();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             obj.stop();
         }
+
+        private void AcsServerMainForm_Load(object sender, EventArgs e)
+        {
+            obj = new AcsServerMain();
+        }
+
+        private void AcsServerMainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason != CloseReason.ApplicationExitCall)
+            {
+                this.WindowState = FormWindowState.Minimized;
+
+                //MessageBox.Show("Application Cannot be Closed by User");
+                e.Cancel = true;
+
+            }
+            
+        }
+
+
+
     }
 }

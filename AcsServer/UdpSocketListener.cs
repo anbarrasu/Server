@@ -119,7 +119,7 @@ namespace AcsServer
             byte[] message = new byte[1024];
             int bytesRead;
             RdrMsgFormat rcvmsg = new RdrMsgFormat();
-            MessageBox.Show("In Receive thread");
+            //MessageBox.Show("In Receive thread");
             try
             {
                 // Creates an IPEndPoint to capture the identity of the client when we'll use the Socket.ReceiveFrom Method
